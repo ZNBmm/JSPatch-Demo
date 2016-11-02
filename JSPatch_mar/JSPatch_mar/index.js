@@ -1,37 +1,7 @@
-# JSPatch_Demo
-> ####通过本例带领大家看看JSPatch的热修复,热更新的能力(她的应用场景太多了,我就不多说了)
-
-- 1.本例中我们要做的事情:修改按钮的背景颜色,高亮是图片
-- 2.修改按钮的点击事件
-- 3.JS新增类,创建JPTableViewController,实现数据源代理方法
-- 4.三方框架在JS中如何使用
-- 5.具体JSPatch请参考官方教程 
-    - [点击进入中文介绍](https://github.com/bang590/JSPatch/blob/master/README-CN.md)
-    - [点击进入学习文档](https://github.com/bang590/JSPatch/wiki)
-
-- ####先看一个图,这是没有修复前的效果图,点击按钮无法进去界面
-  - 按钮本来输出"进不去界面"的
-  - 但是通过JSPatch替换了这个方法
-  - 直接查看index.js文件
 
 
-![image](images/weixiufu.png)
 
-- ######按钮点击的事件的源码
 
-```
-- (void)buttonAction:(UIButton *)sender {
-    NSLog(@"进不去界面");
-}
-```
-
-- ####修复后的效果图
-
-![image](images/xiufu.png) ![image](images/JSPatch_Demo.gif)
-
-###index.js文件源码
-
-```
 /** 首页按钮点击方法替换 修改按钮背景颜色*/
 defineClass('ViewController', {
             
@@ -139,5 +109,3 @@ defineClass("JPTableViewController : UITableViewController <UIAlertViewDelegate>
 
 
 
-
-```
